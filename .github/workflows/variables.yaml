@@ -1,0 +1,13 @@
+name: Variables Workflow
+on: 
+  push:
+    branches:
+      - develop
+env:
+  MY_VARIABLE: ${{ secrets.MY_VARIABLE }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Environment Variable
+        run: echo "MY_VARIABLE is $MY_VARIABLE"
