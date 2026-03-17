@@ -4,8 +4,8 @@ on:
     branches:
       - develop
 env:
-  MY_VARIABLE: ${{ secrets.MY_VARIABLE }}
-  SESSION_NAME: ${{ variables.SESSION_NAME }}
+  - MY_VARIABLE: ${{ secrets.MY_VARIABLE }}
+  - SESSION_NAME: ${{ variables.SESSION_NAME }}
 jobs:
   build:
     runs-on: ubuntu-latest
