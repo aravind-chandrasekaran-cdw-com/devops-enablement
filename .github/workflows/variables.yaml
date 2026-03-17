@@ -5,9 +5,12 @@ on:
       - develop
 env:
   MY_VARIABLE: ${{ secrets.MY_VARIABLE }}
+  SESSION_NAME: ${{ variables.SESSION_NAME }}
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Environment Variable
+      - name: Session name - Environment Variable
+        run: echo "SESSION_NAME is $SESSION_NAME"
+      - name: Print secret Environment Variable
         run: echo "MY_VARIABLE is $MY_VARIABLE"
