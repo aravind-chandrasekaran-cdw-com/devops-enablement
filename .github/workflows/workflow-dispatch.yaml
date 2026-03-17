@@ -1,0 +1,11 @@
+name: Workflow Dispatch Workflow
+on: 
+  workflow_dispatch:
+env:
+  SESSION_NAME: ${{ variables.SESSION_NAME }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Session name - Environment Variable
+        run: echo "SESSION_NAME is $SESSION_NAME"
