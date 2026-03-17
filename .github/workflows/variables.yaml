@@ -1,8 +1,6 @@
 name: Variables Workflow
 on: 
-  push:
-    branches:
-      - develop
+  workflow_dispatch:
 env:
   MY_VARIABLE: ${{ secrets.MY_VARIABLE }}
 jobs:
